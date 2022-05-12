@@ -3,12 +3,12 @@ import banner from '../../../assets/images/chair.png'
 import Button from '../../Shared/Button/Button';
 const Banner = () => {
     return (
-        <div class="hero min-h-screen bg-white bg-banner">
-        <div class="hero-content flex-col lg:flex-row-reverse ">
-          <img src={banner} class="max-w-lg mx-3 rounded-lg shadow-2xl w-full" alt=''/>
-          <div>
+        <div class="hero lg:min-h-screen md:min-h-screen pt-10 pb-20 bg-white  bg-banner">
+        <div class="hero-content flex-col lg:flex-row-reverse pt-0">
+          <img src={banner} class="max-w-lg mx-3 rounded-lg shadow-2xl w-full " alt=''/>
+          <div className='pt-10'>
             <h1 class="text-5xl font-bold">Your New Smile Starts Here</h1>
-            <p class="py-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consectetur minus nostrum accusantium facilis aut, corporis similique itaque quaerat, exercitationem neque quisquam at eum? Consequatur cupiditate et temporibus ut voluptas.</p>
+            <p class="py-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam fugiat ipsam dolorum asperiores ducimus distinctio labore doloremque tempora enim rem, maxime, inventore voluptatum recusandae incid</p>
             <Button>Get Started</Button>
           </div>
         </div>

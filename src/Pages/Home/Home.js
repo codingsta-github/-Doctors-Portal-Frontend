@@ -6,7 +6,7 @@ import Services from './Services/Services';
 import Treatment from './Treatment/Treatment';
 const Home = () => {
     return (
-        <div className='px-12'>
+        <div className='lg:px-12 md:px-10'>
             <Banner></Banner>
             <Cards></Cards>
             <Services></Services>
