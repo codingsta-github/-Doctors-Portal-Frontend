@@ -15,17 +15,17 @@ const Contact = () => {
         <input
           type="email"
           placeholder="Email Address"
-          class="input input-bordered input-md w-full max-w-xs my-3 "
+          className="input input-bordered input-md w-full max-w-xs my-3 "
         />
 
         <input
           type="text"
           placeholder="Subject"
-          class="input input-bordered input-md w-full max-w-xs my-3"
+          className="input input-bordered input-md w-full max-w-xs my-3"
         />
 
         <textarea
-          class="textarea w-80 textarea-bordered my-3 mb-7"
+          className="textarea w-80 textarea-bordered my-3 mb-7"
           placeholder="Your Message"
         ></textarea>
         <Button>submit</Button>

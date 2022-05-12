@@ -7,12 +7,12 @@ import people3 from '../../../assets/images/people3.png'
 const Testimonials = () => {
     return (
       <div>
-        <div class="flex lg:flex justify-between items-center lg:py-20 my-10">
+        <div className="flex lg:flex justify-between items-center lg:py-20 my-10">
           <div className="text-left">
-            <p class="uppercase text-secondary font-bold lg:text-xl">
+            <p className="uppercase text-secondary font-bold lg:text-xl">
             Testimonial
             </p>
-            <h1 class="capitalize font-semibold text-accent lg:text-4xl">What Our Patients Says</h1>
+            <h1 className="capitalize font-semibold text-accent lg:text-4xl">What Our Patients Says</h1>
           </div>
           <img
             src={quote} alt="" className="lg:w-48 w-24"

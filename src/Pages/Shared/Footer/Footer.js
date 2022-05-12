@@ -1,27 +1,28 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
 const Footer = () => {
   return (
     <div className=" bg-footer bg-white text-accent bg-cover mb-20">
-      <footer class="footer p-20 lg:pl-60 content-center">
+      <footer className="footer p-20 lg:pl-60 content-center">
         <div>
-          <span class="footer-title">SERVICES</span>
-          <a class="link link-hover">Emergency Checkup</a>
-          <a class="link link-hover">Monthly Checkup</a>
-          <a class="link link-hover">Weekly Checkup</a>
-          <a class="link link-hover">Deep Checkup</a>
+          <span className="footer-title">SERVICES</span>
+          <Link to="" className="link link-hover">Emergency Checkup</Link>
+          <Link to="" className="link link-hover">Monthly Checkup</Link>
+          <Link to="" className="link link-hover">Weekly Checkup</Link>
+          <Link to="" className="link link-hover">Deep Checkup</Link>
         </div>
         <div>
-          <span class="footer-title">ORAL HEALTH</span>
-          <a class="link link-hover">Fluoride Treatment</a>
-          <a class="link link-hover">Cavity Filling</a>
-          <a class="link link-hover">Teeth Whitening</a>
+          <span className="footer-title">ORAL HEALTH</span>
+          <Link to="" className="link link-hover">Fluoride Treatment</Link>
+          <Link to="" className="link link-hover">Cavity Filling</Link>
+          <Link to="" className="link link-hover">Teeth Whitening</Link>
         </div>
         <div>
-          <span class="footer-title">OUR ADDRESS</span>
-          <a class="link link-hover">New York - 101010 Hudson</a>
-          <a class="link link-hover">Privacy policy</a>
-          <a class="link link-hover">Cookie policy</a>
+          <span className="footer-title">OUR ADDRESS</span>
+          <Link to="" className="link link-hover">New York - 101010 Hudson</Link>
+          <Link to="" className="link link-hover">Privacy policy</Link>
+          <Link to="" className="link link-hover">Cookie policy</Link>
         </div>
       </footer>
       <div className="mt-20 text-center">
