@@ -4,7 +4,7 @@ import Button from '../../Shared/Button/Button';
 const AppoinmentBanner = () => {
 
     return (
-        <div class="hero pt-10  px-10 mt-36 bg-white bg-appointment ">
+        <div class="hero pt-10  px-10 mt-36 bg-white bg-appointment py-10 lg:py-0">
         <div class="hero-content flex-col lg:flex-row py-0  text-white">
           <img src={doctor} class="hidden lg:block md:block max-w-lg  rounded-lg  w-full -mt-36" alt=''/>
           <div >
