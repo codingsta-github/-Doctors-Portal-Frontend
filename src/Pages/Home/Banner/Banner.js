@@ -8,7 +8,7 @@ const Banner = () => {
           <img src={banner} class="max-w-lg mx-3 rounded-lg shadow-2xl w-full" alt=''/>
           <div>
             <h1 class="text-5xl font-bold">Your New Smile Starts Here</h1>
-            <p class="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+            <p class="py-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium consectetur minus nostrum accusantium facilis aut, corporis similique itaque quaerat, exercitationem neque quisquam at eum? Consequatur cupiditate et temporibus ut voluptas.</p>
             <Button>Get Started</Button>
           </div>
         </div>
