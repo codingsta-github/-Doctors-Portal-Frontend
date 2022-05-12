@@ -5,8 +5,8 @@ import cavity from '../../../assets/images/cavity.png'
 import whitening from '../../../assets/images/whitening.png'
 const Services = () => {
   return (
-    <div className=" text-center my-20 font-sans">
-      <div className="my-20">
+    <div className=" text-center my-40 font-sans">
+      <div className="my-10">
       <p className="uppercase text-secondary font-bold text-xl">Our servies</p>
       <h1 className="capitalize font-semibold text-accent text-4xl">
         services we provide
