@@ -12,7 +12,7 @@ const Testimonial = ({image}) => {
             
           </div>
         </div>
-        <div className="card-body py-3">
+        <div className="card-body py-3 pb-3">
               <h4 className="card-title">Winson Herry</h4>
               <h5>California</h5>
             </div>
