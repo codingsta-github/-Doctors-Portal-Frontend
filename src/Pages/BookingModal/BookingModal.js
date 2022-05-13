@@ -14,7 +14,7 @@ const BookingModal = ({appoint,date}) => {
             ✕
           </label>
           <h3 class="text-lg font-bold">{appoint.name}</h3>
-          <div className="flex flex-col  place-items-center">
+          <div className="flex flex-col place-items-center">
             <input
               type="email"
               value={format(date, "PP")}
