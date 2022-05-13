@@ -11,12 +11,12 @@ const AvailableAppointment = ({ date, setDate }) => {
   }, []);
   return (
     <div className="my-20">
-      <p className="text-center text-secondary text-2xl font-semibold">
+      <p className="text-center text-secondary text-2xl font-bold">
         Available Appointments on {format(date, "PP")}{" "}
       </p>
-      <div className="grid grid-cols-1 lg:grid-cols-3">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 my-20 lg:m-20">
         {schedules.map((schedule) => (
-          <Schedule schedule={schedule} key={schedule.id}></Schedule>
+          <Schedule schedule={schedule} key={schedule._id}></Schedule>
         ))}
       </div>
     </div>
