@@ -10,7 +10,7 @@ const AvailableAppointment = ({ date, setDate }) => {
       .then((res) => res.json())
       .then((data) => setSchedules(data));
   }, []);
-  const [appoint,setAppoint]=useState([null])
+  const [appoint,setAppoint]=useState([])
   return (
     <div className="my-20">
       <p className="text-center text-secondary text-2xl font-bold">
@@ -22,7 +22,7 @@ const AvailableAppointment = ({ date, setDate }) => {
         ))}
       </div>
       {
-        appoint && <BookingModal></BookingModal>
+        appoint && <BookingModal appoint={appoint} date={date}></BookingModal>
       }
     </div>
   );
