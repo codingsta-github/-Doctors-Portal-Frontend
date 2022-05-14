@@ -6,10 +6,10 @@ import Schedule from "./Schedule";
 const AvailableAppointment = ({ date, setDate }) => {
   const [schedules, setSchedules] = useState([]);
   useEffect(() => {
-    fetch("services.json")
+    fetch("http://localhost:5000/appointment")
       .then((res) => res.json())
       .then((data) => setSchedules(data));
-  },);
+  },[]);
 
   const [appoint,setAppoint]=useState([])
 
