@@ -6,8 +6,8 @@ import banner from '../../assets/images/chair.png'
 const AppointmentBanner = ({date,setDate}) => {
   
   return (
-    <div className="hero lg:min-h-screen md:min-h-screen py-10 pb-10 bg-white  bg-banner">
-      <div className="hero-content flex-col lg:flex-row-reverse pt-0">
+    <div className="hero lg:min-h-screen md:min-h-screen py-10 pb-10 bg-white  bg-banner w-full">
+      <div className="hero-content flex-col lg:flex-row-reverse pt-0 px-0">
         <img
           src={banner}
           className="max-w-lg lg:mx-3 rounded-lg shadow-2xl w-full lg:ml-20"
