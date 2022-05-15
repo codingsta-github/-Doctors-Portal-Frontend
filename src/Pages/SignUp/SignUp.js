@@ -2,6 +2,7 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
 const SignUp = () => {
   const {
@@ -10,10 +11,17 @@ const SignUp = () => {
     handleSubmit,
   } = useForm();
 
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
-  console.log(user);
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const [
+    createUserWithEmailAndPassword,
+    user,
+    loading,
+    error,
+  ] = useCreateUserWithEmailAndPassword(auth);
+
+  
   const onSubmit = (data) => {
-    console.log(data);
+    createUserWithEmailAndPassword(data.email,data.password)
   };
 
   return (
@@ -78,33 +86,7 @@ const SignUp = () => {
             )}
           </label>
 
-          <label className="label">
-            <span className="label-text">Confirm Password</span>
-          </label>
-
-          <input
-            {...register("confirmPassword", {
-              required: {
-                value: true,
-                message: "Password is required",
-              },
-              minLength: {
-                value: 6,
-                message: "Password must be 6 characters or longer",
-              },
-            })}
-            type="password"
-            placeholder="******"
-            className="input input-bordered"
-          />
-          <label class="label">
-            {errors.password?.type === "required" && (
-              <span class="label-text-alt">{errors.password.message}</span>
-            )}
-            {errors.password?.type === "minLength" && (
-              <span class="label-text-alt">{errors.password.message}</span>
-            )}
-          </label>
+          
 
           <div className="card-actions justify-end">
             <button className="btn btn-accent w-full mt-3 text-white">
