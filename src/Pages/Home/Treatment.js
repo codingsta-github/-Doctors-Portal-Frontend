@@ -1,6 +1,6 @@
 import React from "react";
-import treatment from '../../../assets/images/treatment.png'
-import Button from "../../Shared/Button/Button";
+import treatment from '../../assets/images/treatment.png'
+import Button from "../Shared/Button";
 const Treatment = () => {
   return (
     <div className="hero min-h-screen bg-white lg:px-40">

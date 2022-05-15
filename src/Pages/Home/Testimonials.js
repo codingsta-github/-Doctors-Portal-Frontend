@@ -1,9 +1,9 @@
 import React from 'react';
-import quote from '../../../assets/icons/quote.svg'
-import Testimonial from '../Testimonial/Testimonial';
-import people1 from '../../../assets/images/people1.png'
-import people2 from '../../../assets/images/people2.png'
-import people3 from '../../../assets/images/people3.png'
+import quote from '../../assets/icons/quote.svg'
+import Testimonial from './Testimonial';
+import people1 from '../../assets/images/people1.png'
+import people2 from '../../assets/images/people2.png'
+import people3 from '../../assets/images/people3.png'
 const Testimonials = () => {
     return (
       <div>

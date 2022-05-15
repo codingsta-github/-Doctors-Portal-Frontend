@@ -1,6 +1,6 @@
 import React from 'react';
-import banner from '../../../assets/images/chair.png'
-import Button from '../../Shared/Button/Button';
+import banner from '../../assets/images/chair.png'
+import Button from '../Shared/Button';
 const Banner = () => {
     return (
         <div className="hero lg:min-h-screen md:min-h-screen py-10 pb-10 bg-white  bg-banner">

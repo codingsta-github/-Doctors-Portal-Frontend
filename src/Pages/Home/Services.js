@@ -1,8 +1,8 @@
 import React from "react";
-import Service from "../Service/Service";
-import fluoride from '../../../assets/images/fluoride.png'
-import cavity from '../../../assets/images/cavity.png'
-import whitening from '../../../assets/images/whitening.png'
+import Service from "./Service";
+import fluoride from '../../assets/images/fluoride.png'
+import cavity from '../../assets/images/cavity.png'
+import whitening from '../../assets/images/whitening.png'
 const Services = () => {
   return (
     <div className=" text-center my-40 font-sans">

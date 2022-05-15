@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../Shared/Button/Button";
+import Button from "../Shared/Button";
 
 const Contact = () => {
   return (

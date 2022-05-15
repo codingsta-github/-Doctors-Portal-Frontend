@@ -1,6 +1,6 @@
 import React from 'react';
-import doctor from '../../../assets/images/doctor.png';
-import Button from '../../Shared/Button/Button';
+import doctor from '../../assets/images/doctor.png';
+import Button from '../Shared/Button';
 const Doctor = () => {
 
     return (

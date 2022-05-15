@@ -1,6 +1,6 @@
 import { format } from "date-fns";
 import React, { useEffect, useState } from "react";
-import BookingModal from "../BookingModal/BookingModal";
+import BookingModal from "./BookingModal";
 import Schedule from "./Schedule";
 
 const AvailableAppointment = ({ date, setDate }) => {

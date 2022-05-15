@@ -1,5 +1,5 @@
 import React from "react";
-import BookingButton from "../Shared/Button/BookingButton";
+import BookingButton from "../Shared/BookingButton";
 
 const Schedule = ({ schedule ,setAppoint }) => {
   const { _id, name, slots } = schedule;

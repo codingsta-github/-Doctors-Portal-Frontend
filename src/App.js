@@ -1,16 +1,17 @@
 
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import About from './Pages/About/About';
+import About from './Pages/About';
 import Appointment from './Pages/Appointment/Appointment';
-import Contact from './Pages/Home/Contact/Contact';
+import Login from './Pages/Authentication/Login';
+import SignUp from './Pages/Authentication/SignUp';
+import Contact from './Pages/Home/Contact';
 import Home from './Pages/Home/Home';
-import Testimonials from './Pages/Home/Testimonials/Testimonials';
-import Login from './Pages/Login/Login';
-import NotFound from './Pages/NotFound/NotFound';
-import Footer from './Pages/Shared/Footer/Footer';
-import Header from './Pages/Shared/Header/Header';
-import SignUp from './Pages/SignUp/SignUp';
+import Testimonials from './Pages/Home/Testimonials';
+import NotFound from './Pages/NotFound';
+import Footer from './Pages/Shared/Footer';
+import Header from './Pages/Shared/Header';
+
 
 function App() {
   return (
