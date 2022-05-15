@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Login.css";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import auth from "../../firebase.init";
 import { useForm } from "react-hook-form";
 
@@ -11,11 +12,16 @@ const Login = () => {
     formState: { errors },
     handleSubmit,
   } = useForm();
-  const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
+
+  const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+  const [signInWithEmailAndPassword, user, loading, error] = useSignInWithEmailAndPassword(auth);
+
   if (user) {
     console.log(user);
   }
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    signInWithEmailAndPassword(data.email,data.password)
+  };
 
   return (
     <div className="card lg:w-1/4 w-ful bg-base-100 shadow-xl mx-auto lg:mt-10">
@@ -23,9 +29,6 @@ const Login = () => {
         <h2 className="card-title justify-center">Login</h2>
 
         <form onSubmit={handleSubmit(onSubmit)} className="form-control">
-          
-         
-
           <label className="label">
             <span className="label-text">Your Email</span>
           </label>
@@ -85,13 +88,15 @@ const Login = () => {
           <Link to="" className="text-accent text-xs mt-1">
             Forgot Password ?
           </Link>
-        
 
-        <div className="card-actions justify-end">
-          <button type="submit" className="btn btn-accent w-full mt-3 text-white">
-            Login
-          </button>
-        </div>
+          <div className="card-actions justify-end">
+            <button
+              type="submit"
+              className="btn btn-accent w-full mt-3 text-white"
+            >
+              Login
+            </button>
+          </div>
         </form>
         <p className="text-xs">
           New to Doctors Portal ?{" "}
