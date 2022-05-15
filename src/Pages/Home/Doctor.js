@@ -1,6 +1,6 @@
 import React from 'react';
 import doctor from '../../assets/images/doctor.png';
-import Button from '../Shared/Button';
+import HomeButton from '../Shared/HomeButton';
 const Doctor = () => {
 
     return (
@@ -10,7 +10,7 @@ const Doctor = () => {
           <div >
             <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold">Make an appointment Today</h1>
             <p className="py-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam fugiat ipsam dolorum asperiores ducimus distinctio labore doloremque tempora enim rem, maxime, inventore voluptatum recusandae incid</p>
-            <Button>Get Started</Button>
+            <HomeButton>Get Started</HomeButton>
           </div>
         </div>
       </div>

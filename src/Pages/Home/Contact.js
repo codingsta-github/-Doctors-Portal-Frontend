@@ -28,7 +28,7 @@ const Contact = () => {
           className="textarea w-80 textarea-bordered my-3 mb-7"
           placeholder="Your Message"
         ></textarea>
-        <Button>submit</Button>
+        <Button >submit</Button>
       </div>
     </div>
   );

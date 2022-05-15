@@ -25,7 +25,7 @@ const SignUp = () => {
   };
 
   return (
-    <div className="card lg:w-1/4 w-ful bg-base-100 shadow-xl mx-auto lg:mt-10">
+    <div className="card lg:w-1/4 w-full bg-base-100 shadow-xl mx-auto lg:mt-10">
       <div className="card-body">
         <h2 className="card-title justify-center">Create Your Account</h2>
 

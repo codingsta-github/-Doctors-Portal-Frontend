@@ -1,6 +1,6 @@
 import React from "react";
 import treatment from '../../assets/images/treatment.png'
-import Button from "../Shared/Button";
+import HomeButton from "../Shared/HomeButton";
 const Treatment = () => {
   return (
     <div className="hero min-h-screen bg-white lg:px-40">
@@ -13,7 +13,7 @@ const Treatment = () => {
           <h1 className="lg:text-5xl md:text-3xl text-2xl font-bold">Exceptional Dental Care, on Your Terms</h1>
           <p className="py-6 font-bold">Lorem ipsum dolor sit amet consectetur, adipisicing elit. At molestiae libero esse neque ratione inventore, ex quasi magni nulla cupiditate soluta omnis, praesentium animi, fugit accusamus repellat! Magni, ullam culpa?
           </p>
-          <Button>Get Started</Button>
+          <HomeButton>Get Started</HomeButton>
         </div>
       </div>
     </div>
