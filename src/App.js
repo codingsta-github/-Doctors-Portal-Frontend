@@ -22,9 +22,9 @@ function App() {
         <Route
           path="/appointment"
           element={
-            <RequireAuth>
+            // <RequireAuth>
               <Appointment></Appointment>
-            </RequireAuth>
+            // </RequireAuth>
           }
         ></Route>
         <Route

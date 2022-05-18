@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useSignInWithGoogle } from "react-firebase-hooks/auth";
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from "../../firebase.init";
@@ -19,9 +19,10 @@ const SignUp = () => {
     error,
   ] = useCreateUserWithEmailAndPassword(auth);
 
-  
+  const navigate=useNavigate()
   const onSubmit = (data) => {
     createUserWithEmailAndPassword(data.email,data.password)
+    navigate('/appointment')
   };
 
   return (

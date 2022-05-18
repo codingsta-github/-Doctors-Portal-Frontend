@@ -1,12 +1,35 @@
 import React from "react";
 import { format } from "date-fns";
-const BookingModal = ({ appoint, date,setAppoint }) => {
-  const handleBooking=e=>{
+// import { useAuthState } from "react-firebase-hooks/auth";
+const BookingModal = ({ appoint, date, setAppoint }) => {
+  const { _id, name, slots } = appoint;
+  // const [user, loading, error] = useAuthState();
+
+  const handleBooking = (e) => {
     e.preventDefault();
-    const slot=e.target.slot.value;
-    console.log(slot);
-    setAppoint(null)
-  }
+    const slot = e.target.slot.value;
+
+    const booking = {
+      treatmentId: _id,
+      treatment: name,
+      slot,
+      patient: e.target.email.value,
+      patientName:e.target.name.value,
+      date: format(date, "PP"),
+      phone: e.target.phone.value,
+    };
+
+    fetch("http://localhost:5000/booking", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(booking),
+    })
+    .then(res=>res.json())
+    .then(data=>console.log(data))
+    setAppoint(null);
+  };
   return (
     <div>
       <input type="checkbox" id="my-modal-3" className="modal-toggle" />
@@ -18,8 +41,11 @@ const BookingModal = ({ appoint, date,setAppoint }) => {
           >
             ✕
           </label>
-          <h3 className="text-lg font-bold">Appointment for : {appoint.name}</h3>
-          <form onSubmit={handleBooking} className="flex flex-col place-items-center">
+          <h3 className="text-lg font-bold">Appointment for : {name}</h3>
+          <form
+            onSubmit={handleBooking}
+            className="flex flex-col place-items-center"
+          >
             <input
               type="email"
               value={format(date, "PP")}
@@ -31,7 +57,11 @@ const BookingModal = ({ appoint, date,setAppoint }) => {
               <option disabled selected>
                 Pick your slot
               </option>
-              {appoint.slots?.map(slot=><option value={slot} key={Math.random()*10000}>{slot}</option>)}
+              {slots?.map((slot, i) => (
+                <option value={slot} key={i}>
+                  {slot}
+                </option>
+              ))}
             </select>
 
             <input
@@ -41,7 +71,7 @@ const BookingModal = ({ appoint, date,setAppoint }) => {
               className="input input-bordered my-2 w-full"
             />
             <input
-              name="number"
+              name="phone"
               type="number"
               placeholder="Phone Number"
               className="input input-bordered my-2 w-full"
@@ -52,7 +82,10 @@ const BookingModal = ({ appoint, date,setAppoint }) => {
               placeholder="Your Email"
               className="input input-bordered my-2 w-full"
             />
-            <button type="submit" className="btn btn-accent mt-3 text-white  w-full card-actions items-center">
+            <button
+              type="submit"
+              className="btn btn-accent mt-3 text-white  w-full card-actions items-center"
+            >
               SUBMIT
             </button>
           </form>

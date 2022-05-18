@@ -8,7 +8,7 @@ import auth from "../../firebase.init";
 const Login = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const from= location.state?.from?.pathname || "/";
+  let from = location.state?.from?.pathname || "/";
   const {
     register,
     formState: { errors },
@@ -18,14 +18,13 @@ const Login = () => {
   const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
   const [signInWithEmailAndPassword, user, loading, error] =
     useSignInWithEmailAndPassword(auth);
-
+  
   if (user || gUser) {
     navigate(from, { replace: true });
   }
   const onSubmit = (data) => {
     signInWithEmailAndPassword(data.email, data.password);
   };
-
   return (
     <div className="card lg:w-1/4 w-ful bg-base-100 shadow-xl mx-auto lg:mt-10">
       <div className="card-body">
@@ -52,12 +51,15 @@ const Login = () => {
             className="input input-bordered"
           />
           <label class="label">
+            
             {errors.email?.type === "required" && (
               <span class="label-text-alt">{errors.email.message}</span>
             )}
             {errors.email?.type === "pattern" && (
               <span class="label-text-alt">{errors.email.message}</span>
             )}
+            
+
           </label>
 
           <label className="label">
@@ -86,19 +88,26 @@ const Login = () => {
             {errors.password?.type === "minLength" && (
               <span class="label-text-alt">{errors.password.message}</span>
             )}
+            {error && (
+              <span class="label-text-alt">Incorrect email or password</span>
+            )}
           </label>
+
+          
 
           <Link to="" className="text-accent text-xs mt-1">
             Forgot Password ?
           </Link>
 
           <div className="card-actions justify-end">
-            <button
+            {
+              loading || gLoading ?<button class="btn loading w-full mt-3 text-white">loading</button>:<button
               type="submit"
               className="btn btn-accent w-full mt-3 text-white"
             >
               Login
             </button>
+            }
           </div>
         </form>
         <p className="text-xs">
